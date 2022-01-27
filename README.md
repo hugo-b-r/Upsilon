@@ -4,7 +4,7 @@
   <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="cc by-nc-sa 4.0" src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-525252.svg?labelColor=292929&logo=creative%20commons&style=for-the-badge" /></a>
   <a href="https://github.com/Lauryy06/Upsilon/issues"><img alt="Issues" src="https://img.shields.io/github/issues/Lauryy06/Upsilon.svg?labelColor=292929&logo=git&style=for-the-badge" /></a>
   <br/>
-  <a href="https://discord.gg/Q9buEMduXG"><img alt="Discord" src="https://img.shields.io/discord/663420259851567114?color=blue&labelColor=292929&label=chat%20-%20discord&logo=discord&style=for-the-badge" /></a>
+  <a href="https://discord.gg/hnEqPzAJzn"><img alt="Discord" src="https://img.shields.io/discord/663420259851567114?color=blue&labelColor=292929&label=chat%20-%20discord&logo=discord&style=for-the-badge" /></a>
 </p>
 
 > Vous ne comprenez pas l'anglais ? Vous êtes francophone ? Regardez le [*LISEZ-MOI* français](./README.fr.md) !
@@ -19,7 +19,7 @@ Upsilon is a fork of Omega, an user-made OS that runs on the Numworks calculator
 ### Some new features
 - Enhancements for the Kandinsky python module
 - Support for wallpapers
-- Exernal apps
+- External apps
 - A custom theme
 - Operator overload for python
 - Improvements for the Periodic table application
@@ -29,9 +29,15 @@ Upsilon is a fork of Omega, an user-made OS that runs on the Numworks calculator
 
 ## Installation
 
+### Installer
+
+Go to the [Upsilon website](https://lolocomotive.github.io/Upsilon-website) to the "Install" section. 
+If your calculator is recognized, contains a version of Epsilon lower than 16 and your browser accepts WebUSB, the page will suggest you to install Upsilon.
+Do not disconnect your calculator until the installation is complete.
+
 ### Manual
 
-*As of today, only the manual installation is available. You can refer to this [website](https://www.numworks.com/resources/engineering/software/build/) for the first step if you get errors.*
+ *You can refer to this [website](https://www.numworks.com/resources/engineering/software/build/) for the first step if you get errors.*
 
 
 
@@ -148,18 +154,18 @@ You need a windows version >= 1903.
 ```powershell
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux all /norestart
 ```
-This command activate WSL functionnalities.
+This command activate WSL functionalities.
 
 ```powershell
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
-This one allows virtual machines developped by Microsoft.
+This one allows virtual machines developed by Microsoft.
 
 2. Restart your computer.
 
 3. Download [this file](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) and follow instructions.
 
-4. Now open powershell admain like before and type:
+4. Now open powershell admin like before and type:
 ```powershell
 wsl --set-default-version 2
 ```
@@ -168,7 +174,7 @@ wsl --set-default-version 2
 WSL is now installed.
 
 ### Usbipd installation to connect your calculator
-If you want to connect to the calculator, you have to connect to install this [tool](https://github.com/dorssel/usbipd-win/releases/download/v1.3.0/usbipd-win_1.3.0.msi). This will allow you to connect WSL to the calculator through internet. Follow the on screen informations to install.
+If you want to connect to the calculator, you have to connect to install this [tool](https://github.com/dorssel/usbipd-win/releases/download/v1.3.0/usbipd-win_1.3.0.msi). This will allow you to connect WSL to the calculator through internet. Follow the on screen information to install.
 #### Ubuntu
 1. In a WSL Ubuntu command prompt, type:
 ```bash
@@ -182,7 +188,7 @@ sudo visudo
 `Defaults secure_path="/usr/lib/linux-tools/5.4.0-77-generic:/usr/local/sbin:..."`
 
 #### Debian
-1. If you use debian for your WSL distro, use this comand instead:
+1. If you use debian for your WSL distro, use this command instead:
 ```bash
 sudo apt install usbip hwdata usbutils
 ```
@@ -238,7 +244,7 @@ Now, run either:
 ```bash
 make MODEL=n0100 epsilon_flash
 ```
-to directly flash the calculator after pressing simultaneously `reset` and `6` buttons and pluging in.
+to directly flash the calculator after pressing simultaneously `reset` and `6` buttons and plugging in.
 
 <br>
 
@@ -247,7 +253,7 @@ or:
 ```bash
 make MODEL=n0100 OMEGA_USERNAME="" binpack -j4
 ```
-to make binpack wich you can flash to the caculator from [Ti-planet's webDFU](https://ti-planet.github.io/webdfu_numworks/n0100/). Binpacks are a great way to share a custom build of Upsilon to friends.
+to make binpack witch you can flash to the calculator from [Ti-planet's webDFU](https://ti-planet.github.io/webdfu_numworks/n0100/). Binpacks are a great way to share a custom build of Upsilon to friends.
   
 </details>
 
@@ -265,7 +271,7 @@ Now, run either:
 ```bash
 make epsilon_flash
 ```
-to directly flash the calculator after pressing simultaneously `reset` and `6` buttons and pluging in.
+to directly flash the calculator after pressing simultaneously `reset` and `6` buttons and plugging in.
 
 <br>
 
@@ -274,7 +280,7 @@ or:
 ```bash
 make OMEGA_USERNAME="" binpack -j4
 ```
-to make binpack wich you can flash to the caculator from [Ti-planet's webDFU](https://ti-planet.github.io/webdfu_numworks/n0110/). Binpacks are a great way to share a custom build of Upsilon to friends.
+to make binpack witch you can flash to the calculator from [Ti-planet's webDFU](https://ti-planet.github.io/webdfu_numworks/n0110/). Binpacks are a great way to share a custom build of Upsilon to friends.
 
 </details>
 

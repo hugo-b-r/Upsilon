@@ -24,12 +24,11 @@ constexpr SettingsMessageTree s_contributorsChildren[23] = {SettingsMessageTree(
 
 // Code Settings
 #ifdef HAS_CODE
-constexpr SettingsMessageTree s_codeChildren[3] = {SettingsMessageTree(I18n::Message::FontSizes, s_modelFontChildren), SettingsMessageTree(I18n::Message::Autocomplete), SettingsMessageTree(I18n::Message::SyntaxHighlighting)};
+constexpr SettingsMessageTree s_codeChildren[4] = {SettingsMessageTree(I18n::Message::FontSizes, s_modelFontChildren), SettingsMessageTree(I18n::Message::Autocomplete), SettingsMessageTree(I18n::Message::SyntaxHighlighting), SettingsMessageTree(I18n::Message::CursorSaving)};
 #endif
 constexpr SettingsMessageTree s_modelFontChildren[2] = {SettingsMessageTree(I18n::Message::LargeFont), SettingsMessageTree(I18n::Message::SmallFont)};
 
-
-constexpr SettingsMessageTree s_modelAboutChildren[9] = {SettingsMessageTree(I18n::Message::Username), SettingsMessageTree(I18n::Message::SoftwareVersion), SettingsMessageTree(I18n::Message::UpsilonVersion), SettingsMessageTree(I18n::Message::MicroPythonVersion), SettingsMessageTree(I18n::Message::Battery), SettingsMessageTree(I18n::Message::MemUse), SettingsMessageTree(I18n::Message::SerialNumber), SettingsMessageTree(I18n::Message::FccId), SettingsMessageTree(I18n::Message::Contributors, s_contributorsChildren)};
+constexpr SettingsMessageTree s_modelAboutChildren[10] = {SettingsMessageTree(I18n::Message::Username), SettingsMessageTree(I18n::Message::UpsilonVersion), SettingsMessageTree(I18n::Message::OmegaVersion), SettingsMessageTree(I18n::Message::SoftwareVersion), SettingsMessageTree(I18n::Message::MicroPythonVersion), SettingsMessageTree(I18n::Message::Battery), SettingsMessageTree(I18n::Message::MemUse), SettingsMessageTree(I18n::Message::SerialNumber), SettingsMessageTree(I18n::Message::FccId), SettingsMessageTree(I18n::Message::Contributors, s_contributorsChildren)};
 
 MainController::MainController(Responder * parentResponder, InputEventHandlerDelegate * inputEventHandlerDelegate) :
   ViewController(parentResponder),
