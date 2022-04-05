@@ -65,10 +65,10 @@ private:
     m_autoComplete(true),
     m_syntaxhighlighting(true),
     m_cursorSaving(true),
-    m_brightnessLevel(Ion::Backlight::MaxBrightness),
+    m_brightnessLevel(16),
     m_idleBeforeSuspendSeconds(55),
     m_idleBeforeDimmingSeconds(45),
-    m_brightnessShortcut(4),
+    m_brightnessShortcut(2),
     m_font(KDFont::LargeFont) {}
   I18n::Language m_language;
   I18n::Country m_country;
