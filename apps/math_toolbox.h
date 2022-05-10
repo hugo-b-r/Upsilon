@@ -13,7 +13,7 @@ protected:
   MessageTableCellWithMessage * leafCellAtIndex(int index) override;
   MessageTableCellWithChevron* nodeCellAtIndex(int index) override;
   int maxNumberOfDisplayedRows() override;
-  constexpr static int k_maxNumberOfDisplayedRows = 5; // = 240/40
+  constexpr static int k_maxNumberOfDisplayedRows = 6; // = 240/40
 private:
   int indexAfterFork() const override;
 
