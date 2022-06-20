@@ -278,20 +278,27 @@ pour compiler les binpacks que vous pouvez distribuer et flasher depuis le [Ti-p
 
 <details>
 
-<summary><b>Model bootloader (N0110)</b></summary>
+<summary><b>Model n0110</b></summary>
+
+Le bootloader vous permet d'installer firmware dans des "slots" séparés. Dans ce cas les apps externals ne pourront pas utiliser toute la mémoier mais la moitié. Si un seul slot set utilisé, le bootloader permettra d'utiliser toute la mémoire. Sans bootloader, les apps external peuvent utiliser toute la mémoire.
+
+<details>
+<summary>Bootloader</summary>
+
+Votre calculatrice doit être flashé avec le bootloader d'[Upsilon](https://getupsilon.web.app) ou d'[Omega](https://getomega.dev).
+Compilez avec:
 
 ```bash
 make clean
-make OMEGA_USERNAME="{Votre nom, maximum 15 caractères}" -j4
+make OMEGA_USERNAME="{Your name, max 15 characters}" -j4
 ```
 
-Maintenant, lancez soit:
-
+Ensuite lancez soit:
 ```bash
 make epsilon.A_flash
 ```
 
-pour directement flasher la calculatrice, ou avec le flasher de slots du bootloader avec RESET, puis 4 (menu de flash), et 1 (flash des slots).
+pour flasher le slot actuel ou pour flasher par le flasher du booloader avec RESET, puis 4 (flash) et 1 (flash slots) pour flasher n'importe quel slot.
 
 <br>
 
@@ -301,28 +308,27 @@ soit:
 make OMEGA_USERNAME="" binpack -j4
 ```
 
-pour compiler les binpacks que vous pouvez distribuer et flasher depuis le [Ti-planet's webDFU](https://ti-planet.github.io/webdfu_numworks/n0100/).
-
+pour compiler les binpacks que vous pouvez distribuer et flasher depuis le [Ti-planet's webDFU](https://ti-planet.github.io/webdfu_numworks/n0100/). Vous les trouverez dans `output/release/device/bootloader/`.
 </details>
+
 
 <details>
 
-
-<summary><b>Model n0110 (obsolète, utilisez le bootloader à la place, pas de protection contre Epsilon)</b></summary>
+<summary>Model n0110 sans bootloader (obsolète, utilisez le bootloader à la placepour la protection contre Epsilon)</summary>
+Compilez avec:
 
 ```bash
 make MODEL=n0110 clean
-make MODEL=n0110 OMEGA_USERNAME="{Votre nom, maximum 15 caractères}" -j4
+make MODEL=n0110 OMEGA_USERNAME="{Your name, max 15 characters}" -j4
 ```
 
-Maintenant, lancez soit:
+Ensuite lancez soit:
 
 ```bash
 make MODEL=n0110 epsilon_flash
 ```
 
-pour directement flasher la calculatrice après avoir appuyé simultanément sur `reset` et `6` et avoir branché la calculatrice à l'ordinateur.
-
+pour directement flasher la calculatrice après avoir appuyé simultanément sur `RESET` et `6` et avoir branché la calculatrice à l'ordinateur.
 <br>
 
 soit:
@@ -331,9 +337,11 @@ soit:
 make MODEL=n0110 OMEGA_USERNAME="" binpack -j4
 ```
 
-pour compiler les binpacks que vous pouvez distribuer et flasher depuis le [Ti-planet's webDFU](https://ti-planet.github.io/webdfu_numworks/n0100/).
+pour compiler les binpacks que vous pouvez distribuer et flasher depuis le [Ti-planet's webDFU](https://ti-planet.github.io/webdfu_numworks/n0100/). Vous les trouverez dans `output/release/device/n0110/`.
+</details>
 
 </details>
+
 
 <details>
 
