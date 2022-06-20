@@ -345,6 +345,30 @@ pour compiler les binpacks que vous pouvez distribuer et flasher depuis le [Ti-p
 
 <details>
 
+<summary><b>Native simulator</b></summary>
+
+Lancez cette commande:
+```bash
+make clean
+```
+
+Ensuite, choisissez une commande qui correspond à votre plateforme:
+```bash
+make PLATFORM=simulator TARGET=android
+make PLATFORM=simulator TARGET=ios
+make PLATFORM=simulator TARGET=macos
+make PLATFORM=simulator TARGET=web
+make PLATFORM=simulator TARGET=windows
+make PLATFORM=simulator TARGET=3ds
+```
+
+Vous trouverez les fichiers du simulateur dans `output/release/simulator/`.
+
+</details>
+
+
+<details>
+
 <summary><b>Simulateur web</b></summary>
 
 D'abord, installez emsdk :

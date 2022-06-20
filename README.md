@@ -341,6 +341,30 @@ to make binpack which you can flash to the calculator from [Ti-planet's webDFU](
 
 <details>
 
+<summary><b>Native simulator</b></summary>
+
+Run this command:
+```bash
+make clean
+```
+
+then, choose the command corresponding to your platform:
+```bash
+make PLATFORM=simulator TARGET=android
+make PLATFORM=simulator TARGET=ios
+make PLATFORM=simulator TARGET=macos
+make PLATFORM=simulator TARGET=web
+make PLATFORM=simulator TARGET=windows
+make PLATFORM=simulator TARGET=3ds
+```
+
+You'll find simulator files in `output/release/simulator/`.
+
+</details>
+
+
+<details>
+
 <summary><b>Web simulator</b></summary>
 
 First, install emsdk :
