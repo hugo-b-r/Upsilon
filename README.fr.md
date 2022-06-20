@@ -70,22 +70,10 @@ C'est fait! Vous pouvez aller à l'étape 2.
 
 <br>
 
-Installez tout d'abord des outils de développement.
+Installez toutes les dépendances grâce à cette commande:
 
 ```bash
-dnf install make automake gcc gcc-c++ kernel-devel
-```
-
-Puis les pquets requis:
-
-```bash
-dnf install git ImageMagick libX11-devel libXext-devel freetype-devel libpng-devel libjpeg-devel pkg-config
-```
-
-Et enfin la version pour ARM de GCC:
-
-```bash
-dnf install arm-none-eabi-gcc-cs arm-none-eabi-gcc-cs-c++
+dnf install make automake gcc gcc-c++ kernel-devel git ImageMagick libX11-devel libXext-devel freetype-devel libpng-devel libjpeg-devel pkg-config arm-none-eabi-gcc-cs arm-none-eabi-gcc-cs-c++
 ```
 
 <br>

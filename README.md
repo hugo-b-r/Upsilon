@@ -71,22 +71,10 @@ And there you can go to step 2!
 
 <br>
 
-To install basics dev tools:
+To install all dependencies:
 
 ```bash
-dnf install make automake gcc gcc-c++ kernel-devel
-```
-
-And then install required packages.
-
-```bash
-install git ImageMagick libX11-devel libXext-devel freetype-devel libpng-devel libjpeg-devel pkg-config
-```
-
-Then, install GCC cross compiler for ARM.
-
-```bash
-        dnf install arm-none-eabi-gcc-cs arm-none-eabi-gcc-cs-c++
+dnf install make automake gcc gcc-c++ kernel-devel git ImageMagick libX11-devel libXext-devel freetype-devel libpng-devel libjpeg-devel pkg-config arm-none-eabi-gcc-cs arm-none-eabi-gcc-cs-c++
 ```
 
 <br>
