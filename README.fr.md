@@ -345,7 +345,7 @@ pour compiler les binpacks que vous pouvez distribuer et flasher depuis le [Ti-p
 
 <details>
 
-<summary><b>Native simulator</b></summary>
+<summary><b>Simulateur Natif</b></summary>
 
 Lancez cette commande:
 ```bash
