@@ -94,7 +94,7 @@ Il est recommandé d'utiliser [Homebrew](https://brew.sh/). Une fois intsallé, 
 brew install numworks/tap/epsilon-sdk
 ```
 
-Et toutes les dependances seront installées.
+Et toutes les dépendances seront installées.
 
 <br>
 
@@ -351,8 +351,11 @@ Lancez cette commande:
 ```bash
 make clean
 ```
-
-Ensuite, choisissez une commande qui correspond à votre plateforme:
+Vous pouvez soit choisir d'utiliser la commmande qui détectera automatiquement votre plateforme:
+```bash
+make PLATFORM=simulator
+```
+Ou choisir une commande qui correspond à votre plateforme:
 ```bash
 make PLATFORM=simulator TARGET=android
 make PLATFORM=simulator TARGET=ios

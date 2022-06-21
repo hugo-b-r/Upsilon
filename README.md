@@ -347,8 +347,11 @@ Run this command:
 ```bash
 make clean
 ```
-
-then, choose the command corresponding to your platform:
+You can either build using the following command that will automatically detect your platform:
+```bash
+make PLATFORM=simulator
+```
+or, choose the command corresponding to your platform:
 ```bash
 make PLATFORM=simulator TARGET=android
 make PLATFORM=simulator TARGET=ios
