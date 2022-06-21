@@ -280,7 +280,7 @@ pour compiler les binpacks que vous pouvez distribuer et flasher depuis le [Ti-p
 
 <summary><b>Model n0110</b></summary>
 
-Le bootloader vous permet d'installer firmware dans des "slots" séparés. Dans ce cas les apps externals ne pourront pas utiliser toute la mémoier mais la moitié. Si un seul slot set utilisé, le bootloader permettra d'utiliser toute la mémoire. Sans bootloader, les apps external peuvent utiliser toute la mémoire.
+Le bootloader vous permet d'installer firmware dans des "slots" séparés. Dans ce cas les applications externes ne pourront pas utiliser toute la mémoire mais la moitié. Si un seul slot est utilisé, le bootloader permettra d'utiliser toute la mémoire. Sans bootloader, les apps external peuvent utiliser toute la mémoire.
 
 <details>
 <summary>Bootloader</summary>
