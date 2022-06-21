@@ -299,7 +299,7 @@ Ensuite lancez soit:
 make epsilon.A_flash
 ```
 
-pour flasher le slot actuel ou pour flasher par le flasher du booloader avec RESET, puis 4 (flash) et 1 (flash slots) pour flasher n'importe quel slot.
+pour flasher le slot A (ecla fonctionne de la même façon pour le slot B) ou pour flasher par le flasher du booloader avec RESET, puis 4 (flash) et 1 (flash slots) pour flasher n'importe quel slot.
 
 <br>
 

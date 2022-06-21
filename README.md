@@ -294,7 +294,7 @@ Now, run either:
 make epsilon.A_flash
 ```
 
-to directly flash the calculator into the current slot, or thought bootloader's slot flasher with RESET, then 4 (flash), and 1 (flash slots) for other slots.
+to directly flash the calculator into the slot A (it works the same way for slot B), or thought bootloader's slot flasher with RESET, then 4 (flash), and 1 (flash slots) for other slots.
 
 <br>
 
