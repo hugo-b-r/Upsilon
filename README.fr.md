@@ -290,10 +290,11 @@ Compilez avec:
 
 ```bash
 make clean
-make OMEGA_USERNAME="{Your name, max 15 characters}" -j4
+make OMEGA_USERNAME="{Votre nom, max 15 caractères}" -j4
 ```
 
 Ensuite lancez soit:
+
 ```bash
 make epsilon.A_flash
 ```
@@ -305,7 +306,7 @@ pour flasher le slot actuel ou pour flasher par le flasher du booloader avec RES
 soit:
 
 ```bash
-make OMEGA_USERNAME="" binpack -j4
+make OMEGA_USERNAME="{Votre nom, max 15 caractères}" binpack -j4
 ```
 
 pour compiler les binpacks que vous pouvez distribuer et flasher depuis le [Ti-planet's webDFU](https://ti-planet.github.io/webdfu_numworks/n0100/). Vous les trouverez dans `output/release/device/bootloader/`.
@@ -319,7 +320,7 @@ Compilez avec:
 
 ```bash
 make MODEL=n0110 clean
-make MODEL=n0110 OMEGA_USERNAME="{Your name, max 15 characters}" -j4
+make MODEL=n0110 OMEGA_USERNAME="{Votre nom, max 15 caractères}" -j4
 ```
 
 Ensuite lancez soit:
@@ -334,7 +335,7 @@ pour directement flasher la calculatrice après avoir appuyé simultanément sur
 soit:
 
 ```bash
-make MODEL=n0110 OMEGA_USERNAME="" binpack -j4
+make MODEL=n0110 OMEGA_USERNAME="{Votre nom, max 15 caractères}" binpack -j4
 ```
 
 pour compiler les binpacks que vous pouvez distribuer et flasher depuis le [Ti-planet's webDFU](https://ti-planet.github.io/webdfu_numworks/n0100/). Vous les trouverez dans `output/release/device/n0110/`.
