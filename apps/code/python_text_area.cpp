@@ -24,6 +24,16 @@ constexpr KDColor BackgroundColor = Palette::CodeBackground;
 constexpr KDColor HighlightColor = Palette::CodeBackgroundSelected;
 constexpr KDColor AutocompleteColor = KDColor::RGB24(0xC6C6C6); // TODO Palette change
 
+bool isItalic(mp_token_kind_t tokenKind) {
+  if (!GlobalPreferences::sharedGlobalPreferences()->syntaxhighlighting()) {
+    return false;
+  }
+  if (tokenKind == MP_TOKEN_STRING) {
+    return true;
+  }
+  return false;
+}
+
 static inline KDColor TokenColor(mp_token_kind_t tokenKind) {
   if (!GlobalPreferences::sharedGlobalPreferences()->syntaxhighlighting()) {
     return Palette::CodeText;
@@ -255,7 +265,8 @@ void PythonTextArea::ContentView::drawLine(KDContext * ctx, int line, const char
         BackgroundColor,
         selectionStart,
         selectionEnd,
-        HighlightColor);
+        HighlightColor,
+        false);
   }
   if (UTF8Helper::CodePointIs(firstNonSpace, UCodePointNull)) {
     return;
@@ -285,13 +296,15 @@ void PythonTextArea::ContentView::drawLine(KDContext * ctx, int line, const char
             BackgroundColor,
             selectionStart,
             selectionEnd,
-            HighlightColor);
+            HighlightColor,
+            false);
       }
       tokenLength = TokenLength(lex, tokenFrom);
       tokenEnd = tokenFrom + tokenLength;
 
-      // If the token is being autocompleted, use DefaultColor
+      // If the token is being autocompleted, use DefaultColor/Font
       KDColor color = (tokenFrom <= autocompleteStart && autocompleteStart < tokenEnd) ? Palette::CodeText : TokenColor(lex->tok_kind);
+      bool italic = (tokenFrom <= autocompleteStart && autocompleteStart < tokenEnd) ? false : isItalic(lex->tok_kind);
 
       LOG_DRAW("Draw \"%.*s\" for token %d\n", tokenLength, tokenFrom, lex->tok_kind);
       drawStringAt(ctx, line,
@@ -302,7 +315,9 @@ void PythonTextArea::ContentView::drawLine(KDContext * ctx, int line, const char
         BackgroundColor,
         selectionStart,
         selectionEnd,
-        HighlightColor);
+        HighlightColor,
+        italic
+      );
 
       mp_lexer_to_next(lex);
       LOG_DRAW("Pop token %d\n", lex->tok_kind);
@@ -325,7 +340,8 @@ void PythonTextArea::ContentView::drawLine(KDContext * ctx, int line, const char
           BackgroundColor,
           selectionStart,
           selectionEnd,
-          HighlightColor);
+          HighlightColor,
+          true);
     }
 
     mp_lexer_free(lex);
@@ -345,7 +361,8 @@ void PythonTextArea::ContentView::drawLine(KDContext * ctx, int line, const char
         BackgroundColor,
         nullptr,
         nullptr,
-        HighlightColor);
+        HighlightColor,
+        false);
   }
 }
 
