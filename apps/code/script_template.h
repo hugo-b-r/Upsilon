@@ -15,7 +15,7 @@ public:
   static const ScriptTemplate * Parabola();
   static const ScriptTemplate * Snake();
   const char * name() const { return m_name; }
-  const char * content() const { return m_value + Script::StatusSize(); }
+  const char * content() const { return m_value;}
   const char * value() const { return m_value; }
 private:
   const char * m_name;
