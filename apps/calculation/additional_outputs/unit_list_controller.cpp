@@ -24,7 +24,12 @@ bool UnitListController::handleEvent(Ion::Events::Event event) {
   if (selectedRow() == 0 && (event == Ion::Events::OK || event == Ion::Events::EXE)) {
     return true;
   }
-  return ListController::handleEvent(event);
+
+  // HACK: Change the selected row (prevent some bugs when OK is pressed)
+  selectRow(selectedRow() - 1);
+  bool value = ListController::handleEvent(event);
+  selectRow(selectedRow() + 1);
+  return value;
 }
 
 void UnitListController::setExpression(Poincare::Expression e) {
@@ -112,7 +117,7 @@ int UnitListController::numberOfRows() const {
 
 void UnitListController::willDisplayCellForIndex(HighlightCell * cell, int index) {
   if (index == 0) {
-    MessageTableCell * messageTableCell = (MessageTableCell *)cell;
+    MessageTableCell<> * messageTableCell = (MessageTableCell<> *)cell;
     messageTableCell->setMessage(m_dimensionMessage);
   } else {
     ExpressionsListController::willDisplayCellForIndex(cell, index - 1);

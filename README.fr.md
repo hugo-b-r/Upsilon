@@ -80,6 +80,21 @@ dnf install make automake gcc gcc-c++ kernel-devel git ImageMagick libX11-devel 
 
 </details>
 
+<details>
+
+<summary>Nix/Nixos</summary>
+
+<br>
+
+Installez toutes les dépendances grâce à cette commande:
+```bash
+nix-env -p gcc libpng libjpeg xorg.libX11 pkg-config freetype xorg.libXext python3 imagemagick python310Packages.lz4 python310Packages.pypng python310Packages.pypng gcc-arm-embedded
+```
+
+<br>
+
+</details>
+
 </details>
 
 <details>
@@ -146,7 +161,7 @@ Votre version de windows doit être >= 1903.
 1. Apuyez simulatanément sur les touches "windows" et "x" puis cliquez sur "Powershell administrateur". Entrez ensuite ceci dans la nouvelle fenêtre:
 
 ```powershell
-dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux all /norestart
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
 Cette commande active WSL
@@ -178,7 +193,7 @@ sudo apt-get install build-essential git imagemagick libx11-dev libxext-dev libf
 
 ### Installation d'usbipd pour connecter la calculatrice à WSL (facultatif)
 
-Pour connecter la calculatrice, il faut installer cet [outil](https://github.com/dorssel/usbipd-win/releases/download/v1.3.0/usbipd-win_1.3.0.msi). Il permet de connecter deperiphériques USpar internet.Suivez les instructions pour installer.
+Pour connecter la calculatrice, il faut installer cet [outil](https://github.com/dorssel/usbipd-win/releases/download/v1.3.0/usbipd-win_1.3.0.msi). Il permet de connecter des périphériques par internet. Suivez les instructions pour installer.
 
 #### Ubuntu
 
@@ -299,7 +314,7 @@ Ensuite lancez soit:
 make epsilon.A_flash
 ```
 
-pour flasher le slot A (ecla fonctionne de la même façon pour le slot B) ou pour flasher par le flasher du booloader avec RESET, puis 4 (flash) et 1 (flash slots) pour flasher n'importe quel slot.
+pour directement flasher la calculatrice, ou avec le flasher de slots du bootloader avec RESET, puis 4 (menu de flash), et 1 (flash des slots).
 
 <br>
 
